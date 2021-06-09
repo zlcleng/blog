@@ -2,7 +2,7 @@
   <div ref="pieChart" class="pie-chart" />
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue'
 import * as echarts from 'echarts'
 
@@ -11,11 +11,9 @@ export default defineComponent({
   setup () {
     const pieChart = ref(null)
 
-    const initPieChart = () => {
-      var myChart = echarts.init(pieChart)
-      var option
-
-      option = {
+    const initPieChart = (elem: HTMLElement) => {
+      const myChart = echarts.init(elem)
+      const option = {
         title: {
           text: '某站点用户访问来源',
           subtext: '纯属虚构',
@@ -54,7 +52,7 @@ export default defineComponent({
       option && myChart.setOption(option)
     }
     onMounted(() => {
-      initPieChart()
+      initPieChart(pieChart.value)
     })
     return {
       pieChart

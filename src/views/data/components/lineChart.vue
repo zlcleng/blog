@@ -7,7 +7,7 @@ import { defineComponent, onMounted, ref } from 'vue'
 import * as echarts from 'echarts'
 
 export default defineComponent({
-  name: 'Data',
+  name: 'LineChart',
   setup () {
     const lineChart = ref(null)
 
@@ -94,4 +94,5 @@ export default defineComponent({
 })
 </script>
 <style lang="less" scoped>
+
 </style>
