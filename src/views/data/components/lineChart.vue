@@ -82,6 +82,10 @@ export default defineComponent({
       }
 
       option && myChart.setOption(option)
+      const sizeFun = function () {
+        myChart.resize()
+      }
+      window.addEventListener('resize', sizeFun)
     }
 
     onMounted(() => {

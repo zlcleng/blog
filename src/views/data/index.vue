@@ -34,6 +34,7 @@ export default defineComponent({
   width: 100vw;
   height: 100vh;
   background: url('../../assets/dataBg.jpg') no-repeat;
+  background-size: cover;
   .card-item {
     height: 32vh
   }
