@@ -24,7 +24,7 @@ export default {
   },
   data () {
     return {
-      title: '患者随访系统',
+      title: '后台管理系统',
       logo: require('@/assets/logo.png')
     }
   }

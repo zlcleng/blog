@@ -1,5 +1,6 @@
 <template>
   <div class="data-container">
+    <title-header />
     <el-row :gutter="20">
       <el-col :span="6">
         <box-container>
@@ -7,22 +8,24 @@
         </box-container>
       </el-col>
       <el-col :span="12">
-        <line-chart class="card-item" />
+        <!-- <line-chart class="card-item" /> -->
       </el-col>
       <el-col :span="6">
-        <pie-chart class="card-item" />
+        <box-container>
+          <pie-chart class="card-item" />
+        </box-container>
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script lang="ts">
-import { BoxContainer } from '@/components'
-import { LineChart, pieChart } from './components'
+import { BoxContainer } from '@/components/index'
+import { LineChart, pieChart, TitleHeader } from './components'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: { LineChart, pieChart, BoxContainer },
+  components: { LineChart, pieChart, TitleHeader, BoxContainer },
   name: 'Data',
   setup () {
     return {}

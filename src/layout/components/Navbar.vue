@@ -6,26 +6,27 @@
 
     <div class="right-menu">
       <!-- 全屏显示 -->
-      <screenfull id="screenfull" class="right-menu-item hover-effect" />
+      <!-- <screenfull id="screenfull" class="right-menu-item hover-effect" /> -->
       <!-- 消息中心 -->
-      <reply-msg />
+      <!-- <reply-msg /> -->
       <!-- 个人头像名称 -->
       <el-dropdown class="avatar-container">
         <div class="avatar-wrapper">
-          <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
-          <!-- <span class="user-name">某某某</span> -->
+          <img src="https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif?imageView2/1/w/80/h/80" class="user-avatar">
           <i class="el-icon-caret-bottom" />
         </div>
-        <el-dropdown-menu slot="dropdown" class="user-dropdown">
-          <router-link to="/userSetting">
-            <el-dropdown-item>
-              信息设置
+        <template #dropdown>
+          <el-dropdown-menu class="user-dropdown">
+            <router-link to="/userSetting">
+              <el-dropdown-item>
+                信息设置
+              </el-dropdown-item>
+            </router-link>
+            <el-dropdown-item divided @click="logout">
+              <span style="display:block;">退出登录</span>
             </el-dropdown-item>
-          </router-link>
-          <el-dropdown-item divided @click.native="logout">
-            <span style="display:block;">退出登录</span>
-          </el-dropdown-item>
-        </el-dropdown-menu>
+          </el-dropdown-menu>
+        </template>
       </el-dropdown>
     </div>
   </div>
@@ -33,14 +34,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { Breadcrumb, Hamburger, Screenfull, ReplyMsg } from '@/components'
+import { Breadcrumb, Hamburger } from '@/components/index'
 
 export default {
   components: {
     Breadcrumb,
-    Hamburger,
-    Screenfull,
-    ReplyMsg
+    Hamburger
   },
   data () {
     return {
