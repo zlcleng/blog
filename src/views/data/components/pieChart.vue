@@ -14,17 +14,8 @@ export default defineComponent({
     const initPieChart = (elem: HTMLElement) => {
       const myChart = echarts.init(elem)
       const option = {
-        title: {
-          text: '某站点用户访问来源',
-          subtext: '纯属虚构',
-          left: 'center'
-        },
         tooltip: {
           trigger: 'item'
-        },
-        legend: {
-          orient: 'vertical',
-          left: 'left'
         },
         series: [
           {

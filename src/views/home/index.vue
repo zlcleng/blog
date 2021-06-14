@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    s
+  <div class="home-container">
+    sashd
   </div>
 </template>
 
@@ -13,3 +13,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="less" scoped>
+.home-container {
+  padding: 20px;
+}
+</style>

@@ -24,8 +24,10 @@ export default {
   width: calc(100% - 50px);
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: #fefefe;
   margin: 25px;
+  border-radius: 16px;
+  box-shadow: 10px 10px 10px rgba(243, 245, 253, .1);
 }
 .fixed-header+.app-main {
   padding-top: 50px;

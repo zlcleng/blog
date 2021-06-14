@@ -3,16 +3,28 @@
     <title-header />
     <el-row :gutter="20">
       <el-col :span="6">
-        <box-container>
+        <box-container title="厦门市2020年降水量">
           <line-chart class="card-item" />
+        </box-container>
+        <box-container>
+          <scatter-chart class="card-item" />
+        </box-container>
+        <box-container>
+          <gauge-chart class="card-item" />
         </box-container>
       </el-col>
       <el-col :span="12">
-        <!-- <line-chart class="card-item" /> -->
+        <scatter-map />
       </el-col>
       <el-col :span="6">
         <box-container>
           <pie-chart class="card-item" />
+        </box-container>
+        <box-container>
+          <line-chart class="card-item" />
+        </box-container>
+        <box-container>
+          <custom-chart class="card-item" />
         </box-container>
       </el-col>
     </el-row>
@@ -21,11 +33,11 @@
 
 <script lang="ts">
 import { BoxContainer } from '@/components/index'
-import { LineChart, pieChart, TitleHeader } from './components'
+import { LineChart, pieChart, TitleHeader, GaugeChart, CustomChart, ScatterChart, ScatterMap } from './components'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: { LineChart, pieChart, TitleHeader, BoxContainer },
+  components: { LineChart, pieChart, TitleHeader, BoxContainer, GaugeChart, CustomChart, ScatterChart, ScatterMap }, //, CustomChart
   name: 'Data',
   setup () {
     return {}
@@ -38,8 +50,13 @@ export default defineComponent({
   height: 100vh;
   background: url('../../assets/dataBg.jpg') no-repeat;
   background-size: cover;
+  padding: 0 10px;
+  box-sizing: border-box;
   .card-item {
-    height: 32vh
+    height: 26vh
   }
+}
+/deep/ .el-col {
+  height: 100%;
 }
 </style>

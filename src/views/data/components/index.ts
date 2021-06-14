@@ -7,9 +7,17 @@
 import LineChart from './LineChart.vue'
 import pieChart from './PieChart.vue'
 import TitleHeader from './TitleHeader.vue'
+import CustomChart from './CustomChart.vue'
+import GaugeChart from './GaugeChart.vue'
+import ScatterChart from './ScatterChart.vue'
+import ScatterMap from './ScatterMap.vue'
 
 export {
   TitleHeader,
   LineChart,
-  pieChart
+  pieChart,
+  CustomChart,
+  GaugeChart,
+  ScatterChart,
+  ScatterMap
 }

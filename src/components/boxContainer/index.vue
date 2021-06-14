@@ -4,12 +4,19 @@
     <div class="border-left-bottom" />
     <div class="border-right-top" />
     <div class="border-right-bottom" />
+    <h4 class="title"> {{ title }} </h4>
     <slot />
   </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
 export default defineComponent({
+  props: {
+    title: {
+      type: String,
+      default: '图表'
+    }
+  },
   data () {
     return {}
   }
@@ -24,6 +31,16 @@ export default defineComponent({
   box-sizing: border-box;
   background: rgba(75, 139, 247, 0.05);
   box-shadow: 1px 1px 16px #7ccef4 inset;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .title {
+    color: #b3efff;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 30px;
+  }
   .border-left-top,
   .border-left-bottom,
   .border-right-top,

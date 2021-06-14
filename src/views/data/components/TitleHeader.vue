@@ -1,6 +1,6 @@
 <template>
   <div class="data-header">
-    大数据
+    大数据可视化系统
   </div>
 </template>
 
@@ -16,5 +16,9 @@ export default defineComponent({
   line-height: 65px;
   background: url('~@/assets/dataNav.png') no-repeat;
   background-size: 100% 100%;
+  color: #b3efff;
+  text-align: center;
+  font-size: 24px;
+  line-height: 46px;
 }
 </style>

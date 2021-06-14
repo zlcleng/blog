@@ -32,7 +32,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-, "src/views/data/components/index.js"  ],
+, "src/views/data/components/index.ts", "src/layout/components/Sidebar/FixiOSBug.js"  ],
   "exclude": [
     "node_modules"
   ]

@@ -68,8 +68,8 @@ export default {
   height: 50px;
   overflow: hidden;
   position: relative;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  // background: #e9ebf2; // #e7e9fb;
+  // box-shadow: 0 1px 4px rgba(0,21,41,.08);
 
   .hamburger-container {
     line-height: 46px;
@@ -118,29 +118,6 @@ export default {
         width: 120px;
       }
     }
-    // .btn-bell{
-    //   position: relative;
-    //   right: 5px;
-    //   text-align: center;
-    //   border-radius: 15px;
-    //   cursor: pointer;
-    //   line-height: 50px;
-    //   top: 5px;
-    // }
-    // .btn-bell-badge {
-    //   border-radius: 12px;
-    //   background: #f56c6c;
-    //   color: #fff;
-    //   position: relative;
-    //   top: -16px;
-    //   padding: 2px 5px;
-    //   right: 8px;
-    //   font-size: 12px;
-    // }
-    // .el-icon-chat-dot-round::before{
-    //   font-size: 26px;
-    //   color: #5CC96B;
-    // }
     .avatar-container {
       margin-right: 30px;
 
