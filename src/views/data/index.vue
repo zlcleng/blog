@@ -1,6 +1,16 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-06-16 12:48:21
+ * @LastEditTime: 2021-06-16 13:27:44
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \blog\src\views\data\index.vue
+-->
 <template>
   <div class="data-container">
-    <title-header />
+    <div class="data-header">
+      大数据可视化系统
+    </div>
     <el-row :gutter="20">
       <el-col :span="6">
         <box-container title="厦门市2020年降水量">
@@ -21,7 +31,7 @@
           <pie-chart class="card-item" />
         </box-container>
         <box-container>
-          <line-chart class="card-item" />
+          <funnel-chart class="card-item" />
         </box-container>
         <box-container>
           <custom-chart class="card-item" />
@@ -33,11 +43,11 @@
 
 <script lang="ts">
 import { BoxContainer } from '@/components/index'
-import { LineChart, pieChart, TitleHeader, GaugeChart, CustomChart, ScatterChart, ScatterMap } from './components'
+import { LineChart, pieChart, GaugeChart, CustomChart, ScatterChart, ScatterMap, FunnelChart } from './components'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: { LineChart, pieChart, TitleHeader, BoxContainer, GaugeChart, CustomChart, ScatterChart, ScatterMap }, //, CustomChart
+  components: { LineChart, pieChart, BoxContainer, GaugeChart, CustomChart, ScatterChart, ScatterMap, FunnelChart },
   name: 'Data',
   setup () {
     return {}
@@ -54,6 +64,16 @@ export default defineComponent({
   box-sizing: border-box;
   .card-item {
     height: 26vh
+  }
+  .data-header {
+    height: 65px;
+    line-height: 65px;
+    background: url('~@/assets/dataNav.png') no-repeat;
+    background-size: 100% 100%;
+    color: #b3efff;
+    text-align: center;
+    font-size: 24px;
+    line-height: 46px;
   }
 }
 /deep/ .el-col {

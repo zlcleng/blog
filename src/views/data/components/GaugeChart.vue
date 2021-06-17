@@ -14,7 +14,7 @@ export default defineComponent({
       const option = {
         series: [{
           type: 'gauge',
-          center: ['50%', '60%'],
+          center: ['50%', '70%'],
           startAngle: 200,
           endAngle: -20,
           min: 0,
@@ -25,7 +25,7 @@ export default defineComponent({
           },
           progress: {
             show: true,
-            width: 30
+            width: 20
           },
 
           pointer: {
@@ -33,11 +33,11 @@ export default defineComponent({
           },
           axisLine: {
             lineStyle: {
-              width: 30
+              width: 20
             }
           },
           axisTick: {
-            distance: -45,
+            distance: -35,
             splitNumber: 5,
             lineStyle: {
               width: 2,
@@ -45,7 +45,7 @@ export default defineComponent({
             }
           },
           splitLine: {
-            distance: -52,
+            distance: -42,
             length: 14,
             lineStyle: {
               width: 3,
@@ -53,9 +53,9 @@ export default defineComponent({
             }
           },
           axisLabel: {
-            distance: -10,
+            distance: -16,
             color: '#fefefe',
-            fontSize: 16
+            fontSize: 14
           },
           anchor: {
             show: false
@@ -81,7 +81,7 @@ export default defineComponent({
         },
         {
           type: 'gauge',
-          center: ['50%', '60%'],
+          center: ['50%', '70%'],
           startAngle: 200,
           endAngle: -20,
           min: 0,

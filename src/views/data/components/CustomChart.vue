@@ -20,10 +20,10 @@ export default defineComponent({
       const _animationDurationUpdate:number = 1000
       // const _animationEasingUpdate:string = 'quarticInOut'
       const _valOnRadianMax:number = 200
-      const _outerRadius:number = 200
-      const _innerRadius:number = 170
+      const _outerRadius:number = 100
+      const _innerRadius:number = 80
       const _pointerInnerRadius:number = 40
-      const _insidePanelRadius:number = 140
+      const _insidePanelRadius:number = 70
 
       function renderItem (params, api) {
         const valOnRadian = api.value(1)
@@ -98,7 +98,7 @@ export default defineComponent({
             },
             style: {
               text: makeText(valOnRadian),
-              fontSize: 50,
+              fontSize: 30,
               fontWeight: 700,
               x: params.coordSys.cx,
               y: params.coordSys.cy,
